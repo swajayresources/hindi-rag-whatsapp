@@ -13,14 +13,31 @@ from pydantic import BaseModel
 
 from .whatsapp import handle_incoming, twiml_response
 from .generation import answer
+from .ingestion import load_and_chunk
+from .retrieval import get_vectorstore, ingest_chunks
 
 logging.basicConfig(level=logging.INFO, format="%(levelname)s %(name)s: %(message)s")
 logger = logging.getLogger(__name__)
 
+CORPUS_DIR = "./data/corpus"
+
+
+def _auto_ingest():
+    vs = get_vectorstore()
+    count = vs._collection.count()
+    if count == 0:
+        logger.info("Vector store empty — ingesting corpus from %s", CORPUS_DIR)
+        chunks = load_and_chunk(CORPUS_DIR)
+        ingest_chunks(chunks)
+        logger.info("Ingested %d chunks", len(chunks))
+    else:
+        logger.info("Vector store has %d chunks — skipping ingest", count)
+
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    logger.info("Starting Hindi RAG WhatsApp Bot (Ollama backend)...")
+    logger.info("Starting Hindi RAG WhatsApp Bot...")
+    _auto_ingest()
     logger.info("Ready.")
     yield
 
