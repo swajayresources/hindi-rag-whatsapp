@@ -12,6 +12,8 @@ langchain-groq>=0.2.0
 
 # Vector store
 chromadb>=0.5.0
+fastembed>=0.3.0
+langchain-text-splitters>=0.3.0
 
 # WhatsApp
 twilio>=9.0.0
