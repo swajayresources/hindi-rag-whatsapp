@@ -7,13 +7,13 @@ langchain>=0.3.0
 langchain-community>=0.3.0
 langchain-core>=0.3.0
 langchain-chroma>=0.1.4
-langchain-ollama>=0.2.0
 langchain-groq>=0.2.0
+langchain-text-splitters>=0.3.0
 
 # Vector store
 chromadb>=0.5.0
 fastembed>=0.3.0
-langchain-text-splitters>=0.3.0
+pysqlite3-binary>=0.5.0
 
 # WhatsApp
 twilio>=9.0.0
@@ -21,10 +21,6 @@ twilio>=9.0.0
 # Data ingestion
 pypdf>=4.0.0
 wikipedia-api>=0.6.0
-
-# Evaluation
-ragas>=0.2.0
-datasets>=3.0.0
 
 # Dev
 python-dotenv>=1.0.0
