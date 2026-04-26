@@ -1,0 +1,25 @@
+# Secrets — never commit
+.env
+
+# Python
+venv/
+venv314/
+__pycache__/
+*.pyc
+*.pyo
+.Python
+
+# FastEmbed model cache
+fastembed_cache/
+
+# Temp files
+*.log
+*.log.err
+test_chat.py
+run_demo.py
+test_rag.py
+.graphify_python
+
+# OS
+.DS_Store
+Thumbs.db
