@@ -1,0 +1,90 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "hindi-rag-whatsapp"
+version = "2.0.0"
+description = "Production-grade Hindi RAG service with WhatsApp delivery, grounded citations and evaluation"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [{ name = "Swajay Nandanwade" }]
+keywords = ["rag", "retrieval-augmented-generation", "hindi", "fastapi", "chromadb", "whatsapp"]
+classifiers = [
+  "Programming Language :: Python :: 3.11",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+]
+dependencies = [
+  "fastapi>=0.115.0,<1.0",
+  "uvicorn[standard]>=0.30.0,<1.0",
+  "python-multipart>=0.0.9",
+  "pydantic>=2.7,<3.0",
+  "pydantic-settings>=2.3,<3.0",
+  "langchain>=0.3,<0.4",
+  "langchain-community>=0.3,<0.4",
+  "langchain-core>=0.3,<0.4",
+  "langchain-chroma>=0.1.4,<0.2",
+  "langchain-groq>=0.2,<0.3",
+  "langchain-text-splitters>=0.3,<0.4",
+  "chromadb>=0.5,<0.6",
+  "fastembed>=0.3,<0.4",
+  "pypdf>=4.0",
+  "twilio>=9.0,<10",
+  "python-dotenv>=1.0",
+]
+
+[project.optional-dependencies]
+ollama = ["langchain-ollama>=0.2,<0.3"]
+eval = ["ragas>=0.2", "datasets>=3.0"]
+dev = [
+  "pytest>=8.0",
+  "pytest-cov>=5.0",
+  "httpx>=0.27",
+  "ruff>=0.6",
+  "mypy>=1.10",
+  "types-requests",
+]
+
+[project.scripts]
+hindi-rag-serve = "hindi_rag.cli:serve"
+hindi-rag-ingest = "hindi_rag.cli:ingest"
+hindi-rag-evaluate = "hindi_rag.cli:evaluate"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+src = ["src", "tests"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP", "SIM", "RUF"]
+ignore = ["B008"]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/*" = ["S101"]
+
+[tool.mypy]
+python_version = "3.11"
+plugins = ["pydantic.mypy"]
+warn_unused_configs = true
+ignore_missing_imports = true
+check_untyped_defs = true
+no_implicit_optional = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q --strict-markers"
+markers = [
+  "integration: requires embedding/vector-store dependencies",
+  "slow: long-running evaluation tests",
+]
+filterwarnings = ["ignore::DeprecationWarning"]
+
+[tool.coverage.run]
+source = ["hindi_rag"]
+branch = true
+omit = ["*/tests/*"]

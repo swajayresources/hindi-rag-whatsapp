@@ -4,13 +4,18 @@ services:
     runtime: python
     plan: free
     region: oregon
-    buildCommand: pip install -r requirements.txt
-    startCommand: uvicorn src.main:app --host 0.0.0.0 --port $PORT
+    buildCommand: pip install --upgrade pip && pip install .
+    startCommand: uvicorn hindi_rag.api.main:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /health
     envVars:
+      - key: ENVIRONMENT
+        value: production
+      - key: LOG_JSON
+        value: "true"
       - key: LLM_BACKEND
         value: groq
       - key: GROQ_MODEL
-        value: llama3-8b-8192
+        value: llama-3.1-8b-instant
       - key: GROQ_API_KEY
         sync: false
       - key: TWILIO_ACCOUNT_SID
@@ -19,9 +24,17 @@ services:
         sync: false
       - key: TWILIO_WHATSAPP_NUMBER
         value: "whatsapp:+14155238886"
+      - key: TWILIO_VALIDATE_SIGNATURE
+        value: "true"
       - key: RETRIEVAL_K
         value: "4"
+      - key: RETRIEVAL_FETCH_K
+        value: "12"
       - key: CHUNK_SIZE
         value: "512"
       - key: CHUNK_OVERLAP
         value: "64"
+      - key: RATE_LIMIT_REQUESTS
+        value: "30"
+      - key: RATE_LIMIT_WINDOW_S
+        value: "60"

@@ -1,25 +1,30 @@
-# Secrets — never commit
+# Secrets
 .env
+*.pem
+*.key
 
 # Python
-venv/
-venv314/
 __pycache__/
-*.pyc
-*.pyo
-.Python
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+htmlcov/
+.coverage
 
-# FastEmbed model cache
-fastembed_cache/
+# Runtime artifacts (regenerated from data/corpus)
+data/chroma/
+data/*.log
 
-# Temp files
-*.log
-*.log.err
-test_chat.py
-run_demo.py
-test_rag.py
-.graphify_python
-
-# OS
+# OS / editor
 .DS_Store
-Thumbs.db
+.idea/
+.vscode/
+
+data/chroma-test/
+

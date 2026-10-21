@@ -1,0 +1,430 @@
+{
+  "cases": 26,
+  "hit_at_k": 0.7692307692307693,
+  "recall_at_k": 0.7692307692307693,
+  "mrr": 0.592948717948718,
+  "k": 4,
+  "answers_evaluated": false,
+  "answer_accuracy": null,
+  "refusal_rate": null,
+  "mean_latency_ms": 240.4,
+  "results": [
+    {
+      "question": "भारत की राजधानी क्या है?",
+      "expected": "नई दिल्ली",
+      "answer": "",
+      "grounded": false,
+      "answer_correct": false,
+      "retrieved_sources": [
+        "भारत.txt",
+        "दिल्ली.txt",
+        "मुंबई.txt",
+        "मुंबई.txt"
+      ],
+      "hit": false,
+      "reciprocal_rank": 0.0,
+      "latency_ms": 5004.9
+    },
+    {
+      "question": "भारत का राष्ट्रीय पक्षी कौन सा है?",
+      "expected": "मोर",
+      "answer": "",
+      "grounded": false,
+      "answer_correct": false,
+      "retrieved_sources": [
+        "उत्तर_प्रदेश.txt",
+        "भारत.txt",
+        "हिंदी_भाषा.txt",
+        "महाभारत.txt"
+      ],
+      "hit": true,
+      "reciprocal_rank": 0.5,
+      "latency_ms": 45.4
+    },
+    {
+      "question": "भारत का राष्ट्रीय पशु कौन सा है?",
+      "expected": "बाघ",
+      "answer": "",
+      "grounded": false,
+      "answer_correct": false,
+      "retrieved_sources": [
+        "उत्तर_प्रदेश.txt",
+        "भारत.txt",
+        "हिंदू_धर्म.txt",
+        "भारतीय_संविधान.txt"
+      ],
+      "hit": false,
+      "reciprocal_rank": 0.0,
+      "latency_ms": 50.7
+    },
+    {
+      "question": "भारत को स्वतंत्रता कब मिली?",
+      "expected": "1947",
+      "answer": "",
+      "grounded": false,
+      "answer_correct": false,
+      "retrieved_sources": [
+        "भारतीय_इतिहास.txt",
+        "भारतीय_स्वतंत्रता_संग्राम.txt",
+        "भारतीय_स्वतंत्रता_संग्राम.txt",
+        "भारतीय_स्वतंत्रता_संग्राम.txt"
+      ],
+      "hit": false,
+      "reciprocal_rank": 0.0,
+      "latency_ms": 43.6
+    },
+    {
+      "question": "भारत की जनसंख्या लगभग कितनी है?",
+      "expected": "121",
+      "answer": "",
+      "grounded": false,
+      "answer_correct": false,
+      "retrieved_sources": [
+        "उत्तर_प्रदेश.txt",
+        "भारत.txt",
+        "मुंबई.txt",
+        "भारत.txt"
+      ],
+      "hit": true,
+      "reciprocal_rank": 0.5,
+      "latency_ms": 44.1
+    },
+    {
+      "question": "भारत में कितने राज्य हैं?",
+      "expected": "28",
+      "answer": "",
+      "grounded": false,
+      "answer_correct": false,
+      "retrieved_sources": [
+        "भारत.txt",
+        "राजस्थान.txt",
+        "हिंदी_भाषा.txt",
+        "राजस्थान.txt"
+      ],
+      "hit": true,
+      "reciprocal_rank": 1.0,
+      "latency_ms": 56.1
+    },
+    {
+      "question": "दिल्ली किस नदी के किनारे बसी है?",
+      "expected": "यमुना",
+      "answer": "",
+      "grounded": false,
+      "answer_correct": false,
+      "retrieved_sources": [
+        "दिल्ली.txt",
+        "दिल्ली.txt",
+        "दिल्ली.txt",
+        "दिल्ली.txt"
+      ],
+      "hit": true,
+      "reciprocal_rank": 1.0,
+      "latency_ms": 60.6
+    },
+    {
+      "question": "दिल्ली किस देश की राजधानी है?",
+      "expected": "भारत",
+      "answer": "",
+      "grounded": false,
+      "answer_correct": false,
+      "retrieved_sources": [
+        "दिल्ली.txt",
+        "दिल्ली.txt",
+        "दिल्ली.txt",
+        "दिल्ली.txt"
+      ],
+      "hit": true,
+      "reciprocal_rank": 1.0,
+      "latency_ms": 54.4
+    },
+    {
+      "question": "उत्तर प्रदेश की राजधानी क्या है?",
+      "expected": "लखनऊ",
+      "answer": "",
+      "grounded": false,
+      "answer_correct": false,
+      "retrieved_sources": [
+        "उत्तर_प्रदेश.txt",
+        "उत्तर_प्रदेश.txt",
+        "उत्तर_प्रदेश.txt",
+        "दिल्ली.txt"
+      ],
+      "hit": true,
+      "reciprocal_rank": 1.0,
+      "latency_ms": 37.7
+    },
+    {
+      "question": "उत्तर प्रदेश किस देश में स्थित है?",
+      "expected": "भारत",
+      "answer": "",
+      "grounded": false,
+      "answer_correct": false,
+      "retrieved_sources": [
+        "उत्तर_प्रदेश.txt",
+        "राजस्थान.txt",
+        "उत्तर_प्रदेश.txt",
+        "उत्तर_प्रदेश.txt"
+      ],
+      "hit": true,
+      "reciprocal_rank": 1.0,
+      "latency_ms": 31.4
+    },
+    {
+      "question": "क्रिकेट में कितने विकेट होते हैं?",
+      "expected": "10",
+      "answer": "",
+      "grounded": false,
+      "answer_correct": false,
+      "retrieved_sources": [
+        "क्रिकेट.txt",
+        "क्रिकेट.txt",
+        "क्रिकेट.txt",
+        "क्रिकेट.txt"
+      ],
+      "hit": true,
+      "reciprocal_rank": 1.0,
+      "latency_ms": 44.8
+    },
+    {
+      "question": "क्रिकेट का सबसे बड़ा अंतरराष्ट्रीय टूर्नामेंट कौन सा है?",
+      "expected": "विश्व कप",
+      "answer": "",
+      "grounded": false,
+      "answer_correct": false,
+      "retrieved_sources": [
+        "क्रिकेट.txt",
+        "भारत.txt",
+        "मुंबई.txt",
+        "क्रिकेट.txt"
+      ],
+      "hit": true,
+      "reciprocal_rank": 1.0,
+      "latency_ms": 48.0
+    },
+    {
+      "question": "आयुर्वेद किस प्रकार की चिकित्सा पद्धति है?",
+      "expected": "चिकित्सा",
+      "answer": "",
+      "grounded": false,
+      "answer_correct": false,
+      "retrieved_sources": [
+        "आयुर्वेद.txt",
+        "आयुर्वेद.txt",
+        "आयुर्वेद.txt",
+        "आयुर्वेद.txt"
+      ],
+      "hit": true,
+      "reciprocal_rank": 1.0,
+      "latency_ms": 61.4
+    },
+    {
+      "question": "आयुर्वेद में कितने दोष माने जाते हैं?",
+      "expected": "तीन",
+      "answer": "",
+      "grounded": false,
+      "answer_correct": false,
+      "retrieved_sources": [
+        "आयुर्वेद.txt",
+        "आयुर्वेद.txt",
+        "बौद्ध_धर्म.txt",
+        "आयुर्वेद.txt"
+      ],
+      "hit": true,
+      "reciprocal_rank": 1.0,
+      "latency_ms": 33.8
+    },
+    {
+      "question": "बौद्ध धर्म की स्थापना किसने की?",
+      "expected": "गौतम बुद्ध",
+      "answer": "",
+      "grounded": false,
+      "answer_correct": false,
+      "retrieved_sources": [
+        "योग.txt",
+        "योग.txt",
+        "बौद्ध_धर्म.txt",
+        "योग.txt"
+      ],
+      "hit": true,
+      "reciprocal_rank": 0.3333333333333333,
+      "latency_ms": 45.5
+    },
+    {
+      "question": "बौद्ध धर्म में चार आर्य सत्य किसने बताए?",
+      "expected": "बुद्ध",
+      "answer": "",
+      "grounded": false,
+      "answer_correct": false,
+      "retrieved_sources": [
+        "योग.txt",
+        "बौद्ध_धर्म.txt",
+        "योग.txt",
+        "महाभारत.txt"
+      ],
+      "hit": true,
+      "reciprocal_rank": 0.5,
+      "latency_ms": 57.7
+    },
+    {
+      "question": "बॉलीवुड किस शहर में स्थित है?",
+      "expected": "मुंबई",
+      "answer": "",
+      "grounded": false,
+      "answer_correct": false,
+      "retrieved_sources": [
+        "उत्तर_प्रदेश.txt",
+        "मुंबई.txt",
+        "मुंबई.txt",
+        "मुंबई.txt"
+      ],
+      "hit": false,
+      "reciprocal_rank": 0.0,
+      "latency_ms": 56.5
+    },
+    {
+      "question": "भारतीय शास्त्रीय संगीत में कितने स्वर होते हैं?",
+      "expected": "सात",
+      "answer": "",
+      "grounded": false,
+      "answer_correct": false,
+      "retrieved_sources": [
+        "भारतीय_संगीत.txt",
+        "भारतीय_संगीत.txt",
+        "भारतीय_संगीत.txt",
+        "हिंदी_भाषा.txt"
+      ],
+      "hit": true,
+      "reciprocal_rank": 1.0,
+      "latency_ms": 48.4
+    },
+    {
+      "question": "भारतीय इतिहास में मुगल साम्राज्य की स्थापना किसने की?",
+      "expected": "बाबर",
+      "answer": "",
+      "grounded": false,
+      "answer_correct": false,
+      "retrieved_sources": [
+        "मुगल_साम्राज्य.txt",
+        "भारत.txt",
+        "मुगल_साम्राज्य.txt",
+        "भारतीय_इतिहास.txt"
+      ],
+      "hit": true,
+      "reciprocal_rank": 0.25,
+      "latency_ms": 74.6
+    },
+    {
+      "question": "भारत में मुगल साम्राज्य कब स्थापित हुआ?",
+      "expected": "1526",
+      "answer": "",
+      "grounded": false,
+      "answer_correct": false,
+      "retrieved_sources": [
+        "मुगल_साम्राज्य.txt",
+        "भारत.txt",
+        "भारतीय_स्वतंत्रता_संग्राम.txt",
+        "मुगल_साम्राज्य.txt"
+      ],
+      "hit": false,
+      "reciprocal_rank": 0.0,
+      "latency_ms": 54.7
+    },
+    {
+      "question": "भारत में सिंधु घाटी सभ्यता कहाँ विकसित हुई?",
+      "expected": "सिंधु",
+      "answer": "",
+      "grounded": false,
+      "answer_correct": false,
+      "retrieved_sources": [
+        "भारतीय_इतिहास.txt",
+        "योग.txt",
+        "हिंदी_भाषा.txt",
+        "योग.txt"
+      ],
+      "hit": true,
+      "reciprocal_rank": 1.0,
+      "latency_ms": 45.5
+    },
+    {
+      "question": "ताजमहल कहाँ स्थित है?",
+      "expected": "आगरा",
+      "answer": "",
+      "grounded": false,
+      "answer_correct": false,
+      "retrieved_sources": [
+        "दिल्ली.txt",
+        "उत्तर_प्रदेश.txt",
+        "भारतीय_इतिहास.txt",
+        "दिल्ली.txt"
+      ],
+      "hit": true,
+      "reciprocal_rank": 0.5,
+      "latency_ms": 52.4
+    },
+    {
+      "question": "हिंदी भारत की कितनी प्रतिशत जनसंख्या बोलती है?",
+      "expected": "प्रतिशत",
+      "answer": "",
+      "grounded": false,
+      "answer_correct": false,
+      "retrieved_sources": [
+        "हिंदी_भाषा.txt",
+        "उत्तर_प्रदेश.txt",
+        "हिंदी_भाषा.txt",
+        "हिंदी_भाषा.txt"
+      ],
+      "hit": false,
+      "reciprocal_rank": 0.0,
+      "latency_ms": 41.7
+    },
+    {
+      "question": "भारत का साक्षरता दर कितना है?",
+      "expected": "74",
+      "answer": "",
+      "grounded": false,
+      "answer_correct": false,
+      "retrieved_sources": [
+        "राजस्थान.txt",
+        "भारत.txt",
+        "हिंदी_भाषा.txt",
+        "हिंदी_भाषा.txt"
+      ],
+      "hit": true,
+      "reciprocal_rank": 0.5,
+      "latency_ms": 61.2
+    },
+    {
+      "question": "भारत का सबसे बड़ा राज्य क्षेत्रफल में कौन सा है?",
+      "expected": "राजस्थान",
+      "answer": "",
+      "grounded": false,
+      "answer_correct": false,
+      "retrieved_sources": [
+        "उत्तर_प्रदेश.txt",
+        "राजस्थान.txt",
+        "भारत.txt",
+        "राजस्थान.txt"
+      ],
+      "hit": true,
+      "reciprocal_rank": 0.3333333333333333,
+      "latency_ms": 56.2
+    },
+    {
+      "question": "क्रिकेट का जन्म किस देश में हुआ?",
+      "expected": "इंग्लैंड",
+      "answer": "",
+      "grounded": false,
+      "answer_correct": false,
+      "retrieved_sources": [
+        "क्रिकेट.txt",
+        "क्रिकेट.txt",
+        "क्रिकेट.txt",
+        "क्रिकेट.txt"
+      ],
+      "hit": true,
+      "reciprocal_rank": 1.0,
+      "latency_ms": 40.0
+    }
+  ],
+  "ragas": null
+}

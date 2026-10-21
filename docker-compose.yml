@@ -1,0 +1,39 @@
+services:
+  api:
+    build: .
+    image: hindi-rag-whatsapp:latest
+    ports:
+      - "8000:8000"
+    env_file:
+      - path: .env
+        required: false
+    environment:
+      ENVIRONMENT: ${ENVIRONMENT:-development}
+      LLM_BACKEND: ${LLM_BACKEND:-groq}
+      CHROMA_PERSIST_DIR: /app/data/chroma
+    volumes:
+      - chroma-data:/app/data/chroma
+    healthcheck:
+      test:
+        - CMD
+        - python
+        - -c
+        - "import sys,urllib.request; sys.exit(0 if urllib.request.urlopen('http://127.0.0.1:8000/health', timeout=3).status == 200 else 1)"
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 90s
+    restart: unless-stopped
+
+  # Optional local model backend: `docker compose --profile local-llm up`
+  ollama:
+    image: ollama/ollama:latest
+    profiles: ["local-llm"]
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama-models:/root/.ollama
+
+volumes:
+  chroma-data:
+  ollama-models:
