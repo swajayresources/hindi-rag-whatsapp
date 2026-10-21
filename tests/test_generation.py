@@ -3,9 +3,9 @@
 from __future__ import annotations
 
 import pytest
-from tests.fakes import FakeLLM, FakeRetriever, make_doc
 
 from hindi_rag.generation import REFUSAL, LLMError, RagService, invoke_with_retries
+from tests.fakes import FakeLLM, FakeRetriever, make_doc
 
 
 def test_no_context_refuses_without_calling_llm(settings) -> None:
