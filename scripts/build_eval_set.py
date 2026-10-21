@@ -1,4 +1,4 @@
-"""Build a verified Hindi QA evaluation set from the corpus.
+﻿"""Build a verified Hindi QA evaluation set from the corpus.
 
 Every candidate question is kept ONLY if its ground-truth answer string
 actually occurs in the cited corpus file. This prevents fabricated eval
@@ -10,8 +10,9 @@ import json
 import re
 from pathlib import Path
 
-CORPUS = Path(r"D:\trade\hindi-rag-whatsapp\data\corpus")
-OUT = Path(r"D:\trade\hindi-rag-whatsapp\data\eval\questions.jsonl")
+ROOT = Path(__file__).resolve().parents[1]
+CORPUS = ROOT / "data" / "corpus"
+OUT = ROOT / "data" / "eval" / "questions.jsonl"
 
 # (question, expected_answer_substring, source_file_substring)
 CANDIDATES = [
