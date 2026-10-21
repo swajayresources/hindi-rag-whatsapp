@@ -3,7 +3,7 @@
 from __future__ import annotations
 
 import pytest
-from tests.conftest import FakeLLM, FakeRetriever, make_doc
+from tests.fakes import FakeLLM, FakeRetriever, make_doc
 
 from hindi_rag.generation import REFUSAL, LLMError, RagService, invoke_with_retries
 
